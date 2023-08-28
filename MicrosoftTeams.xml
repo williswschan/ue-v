@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+  <Name>Microsoft Teams</Name>
+  <ID>MicrosoftTeams</ID>
+  <Version>24</Version>
+  <Processes>
+    <Process>
+      <Filename>Teams.exe</Filename>
+    </Process>
+  </Processes>
+  <Settings>
+
+    <Registry>
+      <Path Recursive="true">SOFTWARE\Microsoft\Office\Teams</Path>
+    </Registry>
+
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path Recursive="true">Microsoft\Teams</Path>
+      <Exclude>
+        <Path>Service Worker\CacheStorage</Path>
+      </Exclude>
+      <Exclude>
+        <Path>Cache</Path>
+      </Exclude>
+      <Exclude>
+        <Path>Code Cache</Path>
+      </Exclude>
+      <Exclude>
+        <Path>GPUCache</Path>
+      </Exclude>
+      <Exclude>
+        <FileMask>old_logs_*.txt</FileMask>
+      </Exclude>
+      <Exclude>
+        <FileMask>logs.txt</FileMask>
+      </Exclude>
+      <Exclude>
+        <Path>Partitions</Path>
+      </Exclude>
+    </File>
+
+  </Settings>
+</SettingsLocationTemplate>
