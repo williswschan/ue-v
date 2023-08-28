@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<SettingsLocationTemplate xmlns="http://schemas.microsoft.com/UserExperienceVirtualization/2013A/SettingsLocationTemplate">
+  <Name>Microsoft Edge</Name>
+  <ID>MicrosoftEdge</ID>
+  <Version>8</Version>
+  <Processes>
+    <Process>
+      <Filename>msedge.exe</Filename>
+    </Process>
+  </Processes>
+  <Settings>
+    <Registry>
+      <Path>SOFTWARE\Microsoft\Edge</Path>
+    </Registry>
+    <Registry>
+      <Path>SOFTWARE\Microsoft\Edge\BLBeacon</Path>
+    </Registry>
+    <Registry>
+      <Path>SOFTWARE\Microsoft\Edge\ThirdParty</Path>
+    </Registry>
+    <Registry>
+      <Path>SOFTWARE\Microsoft\Edge\StabilityMetrics</Path>
+    </Registry>
+    <Registry>
+      <Path Recursive="true">SOFTWARE\Microsoft\Edge\PreferenceMACs</Path>
+    </Registry>
+    <Registry>
+      <Path>SOFTWARE\Microsoft\Edge\Defaults</Path>
+    </Registry>
+    <Registry>
+      <Path Recursive="true">SOFTWARE\Microsoft\Edge\Profiles</Path>
+    </Registry>
+    <Registry>
+      <Path Recursive="true">SOFTWARE\Microsoft\EdgeUpdate\ClientState</Path>
+    </Registry>
+    <Registry>
+      <Path Recursive="true">SOFTWARE\Microsoft\EdgeUpdate\Clients</Path>
+    </Registry>
+    <File>
+      <Root>
+        <EnvironmentVariable>APPDATA</EnvironmentVariable>
+      </Root>
+      <Path>Edge</Path>
+      <FileMask>profile.pb</FileMask>
+    </File>
+  </Settings>
+</SettingsLocationTemplate>
